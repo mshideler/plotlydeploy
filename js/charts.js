@@ -87,7 +87,7 @@ function buildCharts(sample) {
     var otuTick = []
     for (var i = 0; i < yticks.length; i++)
       otuTick.push("OTU " + yticks[i]);
-    console.log(otuTick);
+    //console.log(otuTick);
         
     // 8. Create the trace for the bar chart. 
     var barData = [{
@@ -117,7 +117,7 @@ function buildCharts(sample) {
       mode: 'markers',
       marker: {
         size: sample_values,
-        color: [],
+        color: otu_ids,
         colorscale: 'Earth',
         opacity: []
       }
