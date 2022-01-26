@@ -97,7 +97,7 @@ function buildCharts(sample) {
     for (var i = 0; i < yticks.length; i++)
       var Ticks = otuTick.push("OTU " + yticks[i]);
     //})
-    console.log(otuTick);
+    console.log(Ticks);
     
     // 8. Create the trace for the bar chart. 
     var barData = [{
