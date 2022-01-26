@@ -68,7 +68,7 @@ function buildCharts(sample) {
     var filteredMetadata = data.metadata.filter(sampleObj => sampleObj.id == sample);
     var result = filteredMetadata[0];
     //console.log(result);
-    console.log(filteredMetaData);
+    console.log(filteredMetadata);
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     let otu_ids = filteredSample.otu_ids;
