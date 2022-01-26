@@ -84,7 +84,7 @@ function buildCharts(sample) {
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last. 
     var yticks = otu_ids.map(function top10OTUs() {
-      return otu_ids.slice(0,10);
+      return otu_ids.slice(0,10).reverse;
     })[0];
     //console.log(yticks);
 
@@ -94,16 +94,16 @@ function buildCharts(sample) {
     // var otuTick = [];
 
     // // var otuTick = yticks.map(function() {
-    // for (var i = 0; i < yticks.length; i++)
-    //   var Ticks = otuTick.push("OTU " + yticks[i]);
-    // //})
-    // console.log(Ticks);
+    for (var i = 0; i < yticks.length; i++)
+      var Ticks = otuTick.push("OTU " + yticks[i]);
+    //})
+    console.log(Ticks);
     
     // 8. Create the trace for the bar chart. 
     var barData = [{
           type: "bar",
           x: sample_values, 
-          y: ["OTU 1167", "OTU 2859", "OTU 482", "OTU 2264", "OTU 41", "OTU 1189", "OTU 352", "OTU 189", "OTU 2318", "OTU 1977"],
+          y: yticks,
           orientation: 'h',
           marker: {
             width: 1
