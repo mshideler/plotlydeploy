@@ -65,8 +65,8 @@ function buildCharts(sample) {
     
     //  5. Create a variable that holds the first sample in the array.
     var filteredSample = filteredSamplesArray[0];
-    var filteredMetadata = data.metadata.filter(sampleObj => sampleObj.id == sample);
-    var result = filteredMetadata[0];
+    // var filteredMetadata = data.metadata.filter(sampleObj => sampleObj.id == sample);
+    // var result = filteredMetadata[0];
     console.log(result);
 
     //console.log(filteredSample);
