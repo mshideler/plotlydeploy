@@ -108,7 +108,7 @@ function buildCharts(sample) {
     var barData = [{
           type: "bar",
           x: sample_values, 
-          y: otuTick,
+          y: otuTick.reverse(),
           orientation: 'h',
           marker: {
             width: 1
