@@ -95,7 +95,7 @@ function buildCharts(sample) {
 
     var otuTick = yticks.map(function() {
       for (var i = 0; i < yticks.length; i++)
-        otuTick.append("OTU " + yticks[i]);
+        otuTick.push("OTU " + yticks[i]);
     })
     console.log(otuTick);
     
