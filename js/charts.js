@@ -103,13 +103,13 @@ function buildCharts(sample) {
     for (var i = 0; i < yticks.length; i++)
       otuTick.push("OTU " + yticks[i]);
     console.log(otuTick);
-    console.log(otuTick.reverse());
+    
     
     // 8. Create the trace for the bar chart. 
     var barData = [{
           type: "bar",
           x: sample_values, 
-          y: otuTick.reverse(),
+          y: otuTick,
           orientation: 'h',
           marker: {
             width: 1
