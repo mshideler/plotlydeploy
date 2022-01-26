@@ -74,7 +74,7 @@ function buildCharts(sample) {
     let otu_ids = filteredSample.otu_ids;
     let otu_labels = filteredSample.otu_labels;
     let sample_values = filteredSample.sample_values;
-    let washFreq = result.wfreq;
+    let washFreq = filteredMetadata.wfreq;
     console.log(washFreq);
     
     // 7. Create the yticks for the bar chart.
