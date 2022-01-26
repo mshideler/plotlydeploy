@@ -119,7 +119,7 @@ function buildCharts(sample) {
         size: sample_values,
         color: otu_ids,
         colorscale: 'Earth',
-        opacity: []
+        opacity: [0.75]
       }
     }];
 
