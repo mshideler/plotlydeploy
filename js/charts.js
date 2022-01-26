@@ -86,7 +86,7 @@ function buildCharts(sample) {
     var yticks = otu_ids.map(function top10OTUs() {
       return otu_ids.slice(0,10);
     })[0].reverse();
-    console.log(yticks);
+    //console.log(yticks);
 
     // var otuTick = "OTU " + yticks[0].toString();
     // console.log(otuTick);
@@ -101,14 +101,14 @@ function buildCharts(sample) {
 
     var otuTick = []
     for (var i = 0; i < yticks.length; i++)
-      otuTick.push("OTU" + yticks[i]);
+      otuTick.push("OTU " + yticks[i]);
     console.log(otuTick);
     
     // 8. Create the trace for the bar chart. 
     var barData = [{
           type: "bar",
           x: sample_values, 
-          y: yticks,
+          y: otuTick,
           orientation: 'h',
           marker: {
             width: 1
