@@ -75,10 +75,6 @@ function buildCharts(sample) {
     let otu_labels = filteredSample.otu_labels;
     let sample_values = filteredSample.sample_values;
     //console.log(otu_ids);
-    // console.log(sample_values);
-      //  let otu_ids = []
-      //  let out_labels = []
-      //  let sample_values = filteredSample.sample_values.reverse();
     
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
@@ -86,25 +82,13 @@ function buildCharts(sample) {
     var yticks = otu_ids.map(function top10OTUs() {
       return otu_ids.slice(0,10);
     })[0];
-    console.log(yticks);
-
-    // var otuTick = "OTU " + yticks[0].toString();
-    // console.log(otuTick);
-
-    // var otuTick = [];
-
-    // var otuTick = yticks.map(function() {
-    //   for (var i = 0; i < yticks.length; i++)
-    //     otuTick.push("OTU " + yticks[i]);
-    // })
-    // console.log(otuTick);
+    //console.log(yticks);
 
     var otuTick = []
     for (var i = 0; i < yticks.length; i++)
       otuTick.push("OTU " + yticks[i]);
     console.log(otuTick);
-    
-    
+        
     // 8. Create the trace for the bar chart. 
     var barData = [{
           type: "bar",
@@ -116,6 +100,7 @@ function buildCharts(sample) {
           },          
           text: otu_labels
     }];
+
     // 9. Create the layout for the bar chart. 
       var barLayout = {
         title: "Top 10 Bacteria Cultures Found",
@@ -123,6 +108,30 @@ function buildCharts(sample) {
       };
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
+  
+    // 1. Create the trace for the bubble chart.
+    var bubbleData = [{
+      x: otu_ids,
+      y: sample_values,
+      text: otu_labels,
+      mode: 'markers',
+      marker: {
+        color: [],
+        opacity: [],
+        size: sample_values
+      }
+    }];
+
+    // 2. Create the layout for the bubble chart.
+    var bubbleLayout = {
+      title: "Bacteria Cultures Per Sample",
+      xaxis: {title: "OTU ID"}
+    };
+
+    // 3. Use Plotly to plot the data with the layout.
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout);  
   });
 }
+
+
 
