@@ -85,7 +85,7 @@ function buildCharts(sample) {
     //  so the otu_ids with the most bacteria are last. 
     var yticks = otu_ids.map(function top10OTUs() {
       return otu_ids.slice(0,10);
-    })[0];
+    })[0].reverse();
     //console.log(yticks);
 
     // var otuTick = "OTU " + yticks[0].toString();
