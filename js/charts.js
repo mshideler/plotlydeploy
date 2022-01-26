@@ -103,7 +103,7 @@ function buildCharts(sample) {
     var barData = [{
           type: "bar",
           x: sample_values, 
-          y: yticks,
+          y: ["OTU 1167", "OTU 2859", "OTU 482", "OTU 2264", "OTU 41", "OTU 1189", "OTU 352", "OTU 189", "OTU 2318", "OTU 1977"],
           orientation: 'h',
           marker: {
             width: 1
