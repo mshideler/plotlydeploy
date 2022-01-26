@@ -88,12 +88,14 @@ function buildCharts(sample) {
     })[0];
     //console.log(yticks);
 
-    var otuTick = "OTU " + yticks[0].toString();
-    console.log(otuTick);
+    // var otuTick = "OTU " + yticks[0].toString();
+    // console.log(otuTick);
+
+    var otuTick = [];
 
     var otuTick = yticks.map(function() {
       for (var i = 0; i < yticks.length; i++)
-        "OTU " + yticks[i];
+        otuTick.append("OTU " + yticks[i]);
     })
     console.log(otuTick);
     
