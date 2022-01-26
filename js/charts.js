@@ -116,9 +116,10 @@ function buildCharts(sample) {
       text: otu_labels,
       mode: 'markers',
       marker: {
+        size: sample_values,
         color: [],
-        opacity: [],
-        size: sample_values
+        colorscale: 'Earth',
+        opacity: []
       }
     }];
 
