@@ -5,6 +5,6 @@
 
 .jumbotron {
     background-image: url("../images/bacteria.jpg");
-    background-size: 75% 50%;
+    background-size: contain;
     text-align: center;
 }
