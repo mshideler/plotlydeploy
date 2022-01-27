@@ -37,6 +37,7 @@ function buildMetadata(sample) {
     // Filter the data for the object with the desired sample number
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
     var result = resultArray[0];
+    console.log(resultArray);
     // Use d3 to select the panel with id of `#sample-metadata`
     var PANEL = d3.select("#sample-metadata");
 
@@ -65,16 +66,16 @@ function buildCharts(sample) {
     
     //  5. Create a variable that holds the first sample in the array.
     var filteredSample = filteredSamplesArray[0];
-    var filteredMetadata = data.metadata.filter(sampleObj => sampleObj.id == sample);
-    var result = filteredMetadata[0];
+    var resultArray = data.metadata.filter(sampleObj => sampleObj.id == sample);
+    var result = resultArray[0];
     //console.log(result);
-    console.log(filteredMetadata);
+    //console.log(resultArray);
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     let otu_ids = filteredSample.otu_ids;
     let otu_labels = filteredSample.otu_labels;
     let sample_values = filteredSample.sample_values;
-    let washFreq = filteredMetadata.wfreq;
+    let washFreq = resultArray.wfreq;
     //console.log(washFreq);
     
     // 7. Create the yticks for the bar chart.
