@@ -8,3 +8,7 @@
     background-size: contain;
     text-align: center;
 }
+
+.jumbotron h1 {
+    color: #fff
+}
