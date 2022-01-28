@@ -98,7 +98,8 @@ function buildCharts(sample) {
           y: otuTick,
           orientation: 'h',
           marker: {
-            width: 1
+            width: 1,
+            color: 'rgb(2,15,57)'
           },          
           text: otu_labels
     }];

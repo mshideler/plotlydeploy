@@ -1,10 +1,5 @@
-body {
-
-    color: #3a421c;
-}
-
 .jumbotron {
-    background-image: url("../images/bacteria.jpg");
+    background-image: url("../images/bluebacteria.jpg");
     background-size: contain;
     text-align: center;
 }
@@ -16,3 +11,4 @@ body {
 .jumbotron p{
     color: #fff;
 }
+
